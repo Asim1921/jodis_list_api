@@ -1,0 +1,23 @@
+# config/database.yml
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "your_postgresql_password") %>
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: jodis_list_api_development
+
+test:
+  <<: *default
+  database: jodis_list_api_test
+
+production:
+  <<: *default
+  database: jodis_list_api_production
+  username: jodis_list_api
+  password: <%= ENV["militTary@123@*&^$#@$%#@$@"] %>
