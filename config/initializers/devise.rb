@@ -3,7 +3,7 @@ require 'devise'
 
 Devise.setup do |config|
   # The secret key used by Devise
-  config.secret_key = Rails.application.credentials.secret_key_base || 'your-secret-key-here'
+ config.secret_key = ENV['SECRET_KEY_BASE'] || 'your_temporary_secret_key_for_development_only_make_it_long_and_random_123456789'
   
   # ==> Mailer Configuration
   config.mailer_sender = 'noreply@jodislist.com'
