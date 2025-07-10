@@ -34,6 +34,7 @@ gem 'phonelib'
 # Background jobs
 gem 'sidekiq'
 
+gem 'csv'
 # Rails 8 specific gems
 gem 'solid_cache'
 gem 'solid_queue'

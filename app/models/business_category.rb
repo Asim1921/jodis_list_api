@@ -9,7 +9,7 @@ class BusinessCategory < ApplicationRecord
   scope :active, -> { where(active: true) }
   scope :ordered, -> { order(:sort_order, :name) }
 
-  def businesses_count
-    businesses.joins(:user).where(business_status: :approved).count
+   def businesses_count
+    @businesses_count ||= businesses.joins(:user).where(business_status: :approved).count
   end
 end
